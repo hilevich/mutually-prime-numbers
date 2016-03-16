@@ -1,0 +1,33 @@
+package Test;
+
+public class Number123 {
+	public int gcd(int a, int b) {
+
+		while (a != b) {
+
+			if (a > b) {
+				a = a - b;
+			} else {
+				b = b - a;
+			}
+
+		}
+		return a;
+	}
+
+	public static void main(String[] args) {
+
+		int n = 30;
+
+		Number123 re = new Number123();
+
+		for (int i = 2; i < n; i++) {
+			if (re.gcd(i, n) == 1) {
+				System.out.println(i);
+			}
+
+		}
+
+	}
+
+}
